@@ -28,7 +28,7 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: Build Docker Image
+            - name: Build Docker Image
         run: docker build -t ${{ secrets.DOCKER_USERNAME1 }}/nodecicd:latest .
 
       - name: Login to Docker Hub
@@ -39,8 +39,6 @@ jobs:
 
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKER_USERNAME1 }}/nodecicd:latest
-
-
 
 # name: Node.js CI
 
